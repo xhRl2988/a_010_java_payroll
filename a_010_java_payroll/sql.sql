@@ -7,7 +7,7 @@ create table hr_master(
 	jumin1      char(6),
 	jumin2      char(7),
 	department  char(4),			//기준-구분(11)
-	greade      char(2),			//기준-구분(21)
+	grade      char(2),			 	//기준-구분(21)
 	ho          number(2),			//호봉코드
 	status      char(1),			//기준-구분(99)
 	date_in     date,
@@ -117,7 +117,6 @@ insert into hr_master values ('206009','김병석','840811','1201205','4120','21
 
 2.기준적용코드(테이블 명 : hr_standard_code)
 insert into hr_standard_code values ('11','1100','HR팀',          0,0,0,0,sysdate);
-
 insert into hr_standard_code values ('11','1110','HR팀 기획',      0,0,0,0,sysdate);
 insert into hr_standard_code values ('11','1120','HR팀 급여',      0,0,0,0,sysdate);
 insert into hr_standard_code values ('11','1130','HR팀 교육',      0,0,0,0,sysdate);
@@ -149,4 +148,69 @@ insert into hr_standard_code values ('00','21','직급',            0,0,0,0,sysd
 insert into hr_standard_code values ('00','91','지급기준',         0,0,0,0,sysdate);
 insert into hr_standard_code values ('00','99','재직상태',         0,0,0,0,sysdate);
 
+3.호봉코드(테이블 명:hr_hobong_code)
+insert into hr_hobong_code values('10',11,4500000,sysdate);
+insert into hr_hobong_code values('10',12,5000000,sysdate);
+insert into hr_hobong_code values('10',13,6000000,sysdate);
+insert into hr_hobong_code values('10',14,7000000,sysdate);
+insert into hr_hobong_code values('11',11,3100000,sysdate);
+insert into hr_hobong_code values('11',12,3300000,sysdate);
+insert into hr_hobong_code values('11',13,3800000,sysdate);
+insert into hr_hobong_code values('11',14,4000000,sysdate);
+insert into hr_hobong_code values('21',11,3000000,sysdate);
+insert into hr_hobong_code values('21',12,3200000,sysdate);
+insert into hr_hobong_code values('21',13,3700000,sysdate);
+insert into hr_hobong_code values('21',14,3900000,sysdate);
+insert into hr_hobong_code values('31',11,3300000,sysdate);
+insert into hr_hobong_code values('31',12,3600000,sysdate);
+insert into hr_hobong_code values('31',13,4000000,sysdate);
+insert into hr_hobong_code values('31',14,4300000,sysdate);
 
+4.월 근태(테이블 명:hr_month_work)
+	4-1) 2023년 1월 월근태
+insert into hr_month_work values('202301','201001',30,30,0,0,1,0,0,0,0,0,'20230125');
+
+insert into hr_month_work values('202301','202001',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','202002',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','203001',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','204001',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','204002',30,30,1,0,0,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','204003',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','204004',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','205001',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','205002',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','205003',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','206001',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','206002',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','206003',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','206004',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','206005',30,30,0,0,1,0,0,0,0,0,'20230125');
+
+insert into hr_month_work values('202301','206006',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','206007',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','206008',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202301','206009',30,30,0,0,1,0,0,0,0,0,'20230125');
+
+4.월 근태(테이블 명:hr_month_work)
+	4-2) 2023년 2월 월근태
+insert into hr_month_work values('202302','201001',30,30,0,0,1,0,0,0,0,0,'20230125');
+
+insert into hr_month_work values('202302','202001',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','202002',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','203001',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','204001',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','204002',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','204003',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','204004',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','205001',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','205002',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','205003',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206001',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206002',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206003',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206004',30,30,0,1,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206005',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206006',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206007',30,30,2,0,0,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206008',30,30,0,0,1,0,0,0,0,0,'20230125');
+insert into hr_month_work values('202302','206009',30,30,0,0,1,0,0,0,0,0,'20230125');
