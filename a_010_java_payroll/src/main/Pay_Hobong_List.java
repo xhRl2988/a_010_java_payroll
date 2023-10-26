@@ -14,7 +14,7 @@ class PayHobongCodeList{
 		System.out.printf("%3d   %2s   %2d     %7d        %7d      \n", cnt, p_grade, p_ho, p_ho_won, p_ho_won*12 );
 	}
 }
-public class Pay_Hobong_List {
+public class Pay_HobongCode_List {
 	public static void main(String[] args) {
 		DBconnect d=new DBconnect();
 		
