@@ -31,12 +31,12 @@ class PayMonthWprkList{
 	Double total_hol12_3=0.0;
 	
 	void printPayMonthWprk() {
-	    System.out.printf("%3d  %s   %s   %d    %d     %.1f   %d   %d   %.1f   %.1f    %.1f    %.1f   %.1f \n",
+	    System.out.printf("%3d %3s %7s %4d %4d %4.1f %3d %3d %5.1f %5.1f %7.1f %5.1f %5.1f \n",
 	            cnt, w_ym, id, month_std, month_work, month_minus, m13, m14, not11_2, nnt11_3, hol12_1, hol12_2, hol12_3);
 	}
 	void printTotal() {
-	    System.out.printf("                             합계    %.1f   %d  %d   %.1f   %.1f    %.1f    %.1f   %.1f \n",
-	    		total_month_minus, total_m13, total_m14, total_not11_2, total_nnt11_3, total_hol12_1, total_hol12_2, total_hol12_3);
+	    System.out.printf("%27s %4.1f %3d %3d %5.1f %5.1f %7.1f %5.1f %5.1f \n",
+	    		id,total_month_minus, total_m13, total_m14, total_not11_2, total_nnt11_3, total_hol12_1, total_hol12_2, total_hol12_3);
 	}
 	
 }
@@ -70,8 +70,8 @@ public class Pay_MonthWprk_List {
 				PayMonthWprkList p=new PayMonthWprkList();
 				int i_cnt=0;
 				System.out.println("====================================월 근태 현황====================================");
-				System.out.println("번호  근태년월    사원번호   기준일  지급일   제외일  생리 월차 평일OT 평일NT  공휴지급일  공휴OT 공유NT   ");
-				System.out.println("==================================================================================");
+				System.out.println("번호 근태년월   사원번호  기준일 지급일 제외일  생리 월차 평일OT 평일NT   공휴지급일 공휴OT 공유NT   ");
+				System.out.println("=================================================================================");
 
 				while(rs.next()) {
 					p.w_ym=rs.getString("w_ym");
@@ -98,10 +98,11 @@ public class Pay_MonthWprk_List {
 					p.total_hol12_3 = p.total_hol12_3+p.hol12_3;
 					p.printPayMonthWprk();
 				}
-				System.out.println("==================================================================================");
+				System.out.println("=================================================================================");
+				p.id="합계";
 				p.printTotal();
 //				System.out.println("                            합계     "+total_month_minus+"   "  +total_m13+"   " + total_m14+"  "+ total_not11_2+"   "+total_nnt11_3+"    "+total_hol12_1+"    "+total_hol12_2+"   "+total_hol12_3);
-				System.out.println("==================================================================================");
+				System.out.println("=================================================================================");
 				}                                                                                       																											
 			}catch (Exception e) {
 				e.printStackTrace();
